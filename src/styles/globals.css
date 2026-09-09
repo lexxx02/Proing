@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+/* ================================================================
+   PROING LMS — Global Design System
+   Fonts: Plus Jakarta Sans (display) + Inter (body/UI)
+   Tokens: midnight / navy / electric / crimson / surface
+   ================================================================ */
+
+/* --- Base font --- */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  font-family: 'Inter', 'Plus Jakarta Sans', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background-color: #F4F6FA;
+  color: #0F1F3D;
+  margin: 0;
+}
+
+/* --- Custom scrollbar (webkit) --- */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: rgba(15, 31, 61, 0.18);
+  border-radius: 99px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(15, 31, 61, 0.32);
+}
+
+/* --- Focus ring global — accessible y elegante --- */
+:focus-visible {
+  outline: 2px solid #3B7BFF;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* --- Selection color --- */
+::selection {
+  background: rgba(59, 123, 255, 0.18);
+  color: #0F1F3D;
+}
+
+/* --- Typography helpers --- */
+.font-display { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; }
+.font-body    { font-family: 'Inter', system-ui, sans-serif; }
+
+/* --- Transitions base --- */
+.transition-base {
+  transition-property: color, background-color, border-color, box-shadow, transform, opacity;
+  transition-duration: 150ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --- Glass morphism utility --- */
+.glass {
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.glass-dark {
+  backdrop-filter: blur(16px) saturate(200%);
+  -webkit-backdrop-filter: blur(16px) saturate(200%);
+  background: rgba(7, 14, 26, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* --- Progress bar animated fill --- */
+@keyframes progressFill {
+  from { width: 0; }
+  to   { width: var(--progress-width); }
+}
+.progress-animated {
+  animation: progressFill 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* --- Sidebar glow on active item --- */
+@keyframes activeGlow {
+  0%, 100% { box-shadow: 0 0 12px rgba(59,123,255,0.2); }
+  50%       { box-shadow: 0 0 20px rgba(59,123,255,0.35); }
+}
+.nav-active-glow {
+  animation: activeGlow 2.5s ease-in-out infinite;
+}

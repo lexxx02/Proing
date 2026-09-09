@@ -1,0 +1,72 @@
+# Senior Frontend Architect Guidelines
+
+## Stack
+- **React 18+** with functional components and hooks
+- **TypeScript** strict mode (zero `any` allowed)
+- **Vite** as build tool and dev server
+- **React Router DOM** for routing
+- **Tailwind CSS** for styling
+- **shadcn/ui** component library
+- **Lucide Icons** for icons
+
+## Code Style
+- No `any` type - use proper types or `unknown`
+- Use `const`/`let` instead of `var`
+- Functional components only, no class components
+- Custom hooks for reusable logic
+- File naming: camelCase for components, PascalCase for React components
+- Use `classnames`/`clsx`/`tailwind-merge` for conditional Tailwind classes
+
+## Folder Structure
+```
+src/
+  components/
+    layout/     # Layout components (Header, Sidebar, etc.)
+    ui/         # shadcn/ui components (Button, Input, etc.)
+    common/     # Shared utility components
+  pages/        # Page components (route-level)
+  types/        # TypeScript type definitions
+  mocks/        # API mock data for development
+  hooks/        # Custom React hooks
+  utils/        # Utility functions
+  styles/       # Global styles
+```
+
+## Tailwind CSS
+- Use `bg-primary-600`, `text-primary-600` etc. for consistent theming
+- `clsx` for conditional class joining
+- `tailwind-merge` for safe class merging
+- Responsive: `sm:`, `md:`, `lg:`, `xl:` prefixes
+
+## Shadcn/ui
+- Generate components with `npx shadcn-ui@latest add <component>`
+- All shadcn/ui components go in `components/ui/`
+- Use `cn` alias from `tailwind-merge` for class merging
+
+## Lucide Icons
+- Import as `{ IconName } from 'lucide-react'`
+- Use `<IconName className="h-4 w-4" />` or similar sizes
+- Consistent icon sizes across the app
+
+## React Router
+- Route definitions in dedicated router file
+- `useNavigate`, `useParams`, `useRouteParams` hooks
+- `ErrorBoundary` for error handling
+- Lazy loading with `import()`
+
+## State Management
+- Prefer React Query or SWR for server state
+- Local state with `useState` for UI state
+- Context API only for truly global state
+
+## Accessibility
+- Semantic HTML
+- `aria-*` attributes where needed
+- Keyboard navigation support
+- Color contrast following WCAG AA
+
+## Performance
+- `useMemo` for expensive computations
+- `useCallback` for stable function references
+- Code splitting for large components
+- Image optimization with `next/image` or similar
