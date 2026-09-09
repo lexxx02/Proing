@@ -15,7 +15,7 @@ import { mockCourses } from '@/mocks/db';
 
 /**
  * CourseModules — Vista de módulos / contenido de un curso
- * Réplica fiel al diseño UTP+class:
+ * Diseño PROING LMS:
  *  - Header breadcrumb con link "Volver a cursos" y nombre del curso
  *  - Sub-navegación horizontal (Sílabo, Contenido, Evaluaciones, Tareas, Foros, Notas, Anuncios, Zoom)
  *  - Banner aviso docente en fondo azul oscuro (#0A162B)

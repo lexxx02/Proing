@@ -133,7 +133,7 @@ const CourseThumbnail = ({ color, seed }: { color: string; seed: number }): Reac
 };
 
 /**
- * CourseCard — Tarjeta estilo UTP+class
+ * CourseCard — Tarjeta de curso PROING
  * Miniatura ilustrada superior · código + nombre · docente · barra de progreso
  */
 export default function CourseCard({ course }: CourseCardProps): React.JSX.Element {

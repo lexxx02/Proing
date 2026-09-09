@@ -1,5 +1,5 @@
 /**
- * PROING LMS — Contratos centrales estilo Canvas (UTP+ Class)
+ * PROING LMS — Contratos centrales
  * Ubicación: src/types/index.ts
  * Stack: React 18+ / TypeScript strict (cero `any`)
  */
@@ -19,7 +19,7 @@ export interface User {
   id: string;
   /** Nombre completo para mostrar */
   name: string;
-  /** Email institucional (@utp.edu.pe) */
+  /** Email institucional (@proing.edu.pe) */
   email: string;
   /** URL del avatar (puede ser placeholder) */
   avatarUrl: string;

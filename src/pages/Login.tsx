@@ -16,7 +16,7 @@ import type { UserRole } from '@/types';
 export default function Login(): React.JSX.Element {
   const navigate = useNavigate();
 
-  const [email, setEmail] = React.useState<string>('valeria.quispe@utp.edu.pe');
+  const [email, setEmail] = React.useState<string>('valeria.quispe@proing.edu.pe');
   const [password, setPassword] = React.useState<string>('password123');
   const [role, setRole] = React.useState<UserRole>('student');
   const [showPassword, setShowPassword] = React.useState<boolean>(false);
@@ -57,11 +57,11 @@ export default function Login(): React.JSX.Element {
     setRole(nextRole);
     setError(null);
     if (nextRole === 'student') {
-      setEmail('valeria.quispe@utp.edu.pe');
+      setEmail('valeria.quispe@proing.edu.pe');
     } else if (nextRole === 'teacher') {
-      setEmail('roberto.salazar@utp.edu.pe');
+      setEmail('roberto.salazar@proing.edu.pe');
     } else {
-      setEmail('admin.proing@utp.edu.pe');
+      setEmail('admin@proing.edu.pe');
     }
     setPassword('password123');
   }, []);
@@ -72,7 +72,7 @@ export default function Login(): React.JSX.Element {
       setError(null);
 
       if (!email.includes('@')) {
-        setError('Ingresa un correo institucional válido (@utp.edu.pe)');
+        setError('Ingresa un correo institucional válido (@proing.edu.pe)');
         return;
       }
       if (password.length < 6) {
@@ -159,7 +159,7 @@ export default function Login(): React.JSX.Element {
               PROING
             </p>
             <p className="text-[10px] font-semibold uppercase tracking-widest text-white/50">
-              UTP · Campus Virtual LMS
+              Campus Virtual LMS
             </p>
           </div>
         </div>
@@ -246,7 +246,7 @@ export default function Login(): React.JSX.Element {
                 Iniciar sesión
               </h2>
               <p className="mt-1.5 text-sm text-slate-500">
-                Usa tu correo institucional UTP para continuar.
+                Usa tu correo institucional PROING para continuar.
               </p>
             </div>
 
@@ -318,7 +318,7 @@ export default function Login(): React.JSX.Element {
                   id="email"
                   type="email"
                   autoComplete="email"
-                  placeholder="usuario@utp.edu.pe"
+                  placeholder="usuario@proing.edu.pe"
                   value={email}
                   onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
                   required
@@ -473,10 +473,10 @@ export default function Login(): React.JSX.Element {
             >
               ¿Problemas para acceder?{' '}
               <a
-                href="mailto:soporte@proing.utp.edu.pe"
+                href="mailto:soporte@proing.edu.pe"
                 className="font-semibold text-slate-600 hover:underline"
               >
-                soporte@proing.utp.edu.pe
+                soporte@proing.edu.pe
               </a>
             </div>
           </div>

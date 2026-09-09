@@ -12,7 +12,7 @@ import type { User, Course, CourseModule, Assignment } from '@/types';
 export const currentUser: User = {
   id: 'user-01',
   name: 'Mateo Alejandro Morales',
-  email: 'u24108592@utp.edu.pe',
+  email: 'estudiante@proing.edu.pe',
   avatarUrl: '',
   role: 'student',
 };
