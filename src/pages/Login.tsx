@@ -205,7 +205,7 @@ export default function Login(): React.JSX.Element {
 
         {/* Footer institucional */}
         <div className="relative z-10 flex items-center justify-between text-xs text-white/30">
-          <span>© 2026 PROING · Universidad Tecnológica del Perú</span>
+          <span>© 2026 PROING · Campus Virtual</span>
           <span>2026-II</span>
         </div>
       </div>

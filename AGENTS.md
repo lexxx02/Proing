@@ -46,7 +46,7 @@ src/
 ### Tailwind CSS Configuration
 - `clsx` for conditional class joining
 - `tailwind-merge` for safe Tailwind class merging
-- Custom colors in `tailwind.config.ts` matching UTP brand
+- Custom colors in `tailwind.config.ts` matching PROING brand
 - `safelist` for utility classes used dynamically
 - `prefix` disabled (use full class names)
 
